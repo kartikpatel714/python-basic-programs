@@ -50,14 +50,6 @@ def takeCommand():
         return "None"
     return query
 
-# def sendEmail(to, content):
-#     server = smtplib.SMTP('smtp.gmail.com', 587)
-#     server.ehlo()
-#     server.starttls()
-#     server.login('youremail@gmail.com', 'your-password')
-#     server.sendmail('youremail@gmail.com', to, content)
-#     server.close()
-
 if __name__ == "__main__":
     wishMe()
     while True:
@@ -79,12 +71,9 @@ if __name__ == "__main__":
         elif 'open google' in query:
             webbrowser.open("google.com")
 
-        elif 'open stackoverflow' in query:
-            webbrowser.open("stackoverflow.com")   
-
 
         elif 'play music' in query:
-            music_dir = 'D:\\Non Critical\\songs\\Favorite Songs2'
+            music_dir = 'D:\\mp3\\songs\\Favorite Songs2'
             songs = os.listdir(music_dir)
             print(songs)    
             os.startfile(os.path.join(music_dir, songs[0]))
